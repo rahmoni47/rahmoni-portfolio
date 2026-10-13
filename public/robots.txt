@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rahmoni.netlify.app/sitemap.xml
