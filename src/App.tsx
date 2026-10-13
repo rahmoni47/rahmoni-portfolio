@@ -66,9 +66,16 @@ export default function App() {
             <a className="status" href={`mailto:${EMAIL}`}><span className="dot" aria-hidden="true" />Open to freelance and engineering roles</a>
             <button className="burger" aria-expanded={open} aria-controls="menu" onClick={() => setOpen(!open)}>{open ? 'Close' : 'Menu'}</button>
           </div>
-          <h1>Rahmoni<span lang="ar" dir="rtl">رحموني</span></h1>
-          <p className="role">Abderrahim Ghedjati. Software engineer, Algeria.</p>
-          <p className="line">I engineer backend systems that products run on, and turn business requirements into working software.</p>
+          <div className="hero-row">
+            <div className="hero-photo-wrap">
+              <img src="/avatar.jpg" alt="Abderrahim Ghedjati (Rahmoni)" className="hero-photo" width="180" height="225" loading="eager" />
+            </div>
+            <div className="hero-intro">
+              <h1>Rahmoni</h1>
+              <p className="role">Abderrahim Ghedjati. Software engineer, Algeria.</p>
+              <p className="line">I engineer backend systems that products run on, and turn business requirements into working software.</p>
+            </div>
+          </div>
           <nav id="menu" aria-label="Primary" className={open ? 'open' : ''}>
             {NAV.map(([id, l]) => <a key={id} href={`#${id}`} aria-current={active === id ? 'true' : undefined} onClick={() => setOpen(false)}>{l}</a>)}
           </nav>
